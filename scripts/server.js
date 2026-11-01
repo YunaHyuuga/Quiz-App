@@ -16,7 +16,8 @@ const server = createServer(async (req, res) => {
   try {
     const pathname = decodeURIComponent(new URL(req.url, 'http://localhost').pathname);
     // Only public application files are served, never repository metadata or tools.
-    if (pathname !== '/' && pathname !== '/index.html' && !/^\/src\/[a-zA-Z0-9_-]+\.(js|css)$/.test(pathname)) {
+    const designPage = /^\/designs\/(index|calm|arcade|editorial)\.html$/.test(pathname);
+    if (pathname !== '/' && pathname !== '/index.html' && !/^\/src\/[a-zA-Z0-9_-]+\.(js|css)$/.test(pathname) && !designPage) {
       res.writeHead(404).end('Not found');
       return;
     }

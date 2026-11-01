@@ -7,4 +7,5 @@ await rm(dist, { recursive: true, force: true });
 await mkdir(dist, { recursive: true });
 await cp(new URL('index.html', root), new URL('index.html', dist));
 await cp(new URL('src/', root), new URL('src/', dist), { recursive: true });
+await cp(new URL('designs/', root), new URL('designs/', dist), { recursive: true });
 console.log(`Statische App erstellt: ${fileURLToPath(dist)}`);

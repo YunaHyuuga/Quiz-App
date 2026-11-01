@@ -2,6 +2,22 @@
 
 Eine lauffähige Blaupause für eine deutschsprachige Quiz-App. Responsive Oberfläche, drei Themenwelten, zwölf Beispielfragen, direktes Antwortfeedback und eine Ergebnisübersicht. Bestwerte werden ausschließlich im lokalen Browser gespeichert. Keine Anmeldung, kein Backend, keine externen Fonts oder Laufzeit-Abhängigkeiten.
 
+## Designvorschläge: Popkultur, Anime & Games
+
+Die neue inhaltliche Richtung ist ein Fandom-Quiz rund um Star Wars, Herr der Ringe, One Piece, Demon Slayer, Fallout, Skyrim und weitere Universen. Der Arbeitstitel der Designstudien ist **Quizverse**. Die ursprüngliche Quizzeit-App bleibt als technische Blaupause bestehen, bis eine Designrichtung ausgewählt ist.
+
+Nach `npm run dev` die Route `/designs/index.html` öffnen, um alle drei Vorschläge zu vergleichen:
+
+| HTML-Datei | Richtung |
+| --- | --- |
+| [Calm](designs/calm.html) | Helles Blau, klare Karten, weiche Rundungen |
+| [Arcade](designs/arcade.html) | Dunkler Gaming-Look, Neon-Lime, violette Akzente |
+| [Editorial](designs/editorial.html) | Warme Naturtöne, Serifenschrift, Fantasy- und Lore-Atmosphäre |
+
+Jeder Entwurf ist eine eigenständige HTML-Datei mit eingebettetem CSS und JavaScript. Er lässt sich auch direkt im Browser öffnen. Alle enthalten sechs filterbare Themenwelten, je zwei Demo-Fragen, Antwortfeedback, Auswertung und einen Neustart. Es gibt keine erfundenen Ranglisten, Konten oder gespeicherten Fortschritte. Die Studien werden beim Build nach `dist/designs/` kopiert.
+
+Die Layouts passen sich Smartphone, Tablet und Desktop an. Sie berücksichtigen mindestens 44 Pixel große Touch-Ziele, Tastaturfokus, reduzierte Bewegung und Safe Areas für Displayausschnitte bzw. Home-Indikatoren. Android, iOS und iPadOS sind Zielplattformen; die Entwürfe sind Web-Prototypen und noch keine installierbaren Apps. Die spätere Umsetzung als PWA oder native App ist nach der Designauswahl festzulegen. Physische Gerätetests stehen noch aus.
+
 ## Lokal starten
 
 Voraussetzung: Node.js ab Version 22 (CI: Node.js 24). Eine Paketinstallation ist nicht nötig.
