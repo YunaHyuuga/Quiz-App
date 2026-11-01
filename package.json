@@ -1,0 +1,15 @@
+{
+  "name": "quiz-app",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Eine erweiterbare Quiz-App mit JavaScript, HTML und CSS.",
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "dev": "node scripts/server.js",
+    "start": "node scripts/server.js",
+    "build": "node scripts/build.js",
+    "preview": "node scripts/server.js --dist",
+    "test": "node --test"
+  }
+}
